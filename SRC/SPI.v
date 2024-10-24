@@ -22,11 +22,11 @@
 
 module SPI_driver(
     input  wire clk,
-    output reg [2:0] cur_state,
+    output reg [3:0] cur_state,
     
     input wire  SPI_MISO,
     output reg  SPI_MOSI,
-    output reg  SPI_CLK,
+    inout wire  SPI_CLK_LINE,
     output reg  SPI_EN,
     
     output reg busy,
@@ -38,11 +38,11 @@ module SPI_driver(
     input wire [7:0] Spi_tx_reg  
     );
 
-localparam IDLE  = 3'b000;
-localparam SPITX = 3'b001;
-localparam SPIRX = 3'b010;
-localparam SPIED = 3'b100;
-
+localparam IDLE   = 4'b0000;
+localparam SPITX  = 4'b0001;
+localparam SPIRX  = 4'b0010;
+localparam SPIED  = 4'b0100;
+localparam SPIACK = 4'b1000;
 
 reg [1:0] command_FIFO[15:0];
 reg [7:0] tx_FIFO[15:0];
@@ -53,12 +53,15 @@ reg [3:0] tx_addrw;
 reg [3:0] tx_addrr;
 reg [3:0] rx_addrw;
 reg [3:0] rx_addrr;
+reg SPI_CLK;
 wire command_empty;
 wire tx_empty;
 wire rx_empty;
 
+assign SPI_CLK_LINE = SPI_CLK;
+
 initial begin
-    cur_state = 7'd0;
+    cur_state = 4'd0;
     SPI_MOSI = 1'b0;
     SPI_CLK = 1'b0;
     SPI_EN = 1'b0;
@@ -118,12 +121,12 @@ always @(posedge clk) begin
                 case(clk_counter)
                     3'b000 : begin
                         SPI_EN   <= 1'b1;
-                        SPI_CLK  <= 1'b0;
+                        SPI_CLK  <= 1'b1;
                         SPI_MOSI <= tx_FIFO[tx_addrr][bit_counter];
                         clk_counter <= clk_counter + 1;
                     end
                     3'b100 : begin
-                        SPI_CLK <= 1'b1;
+                        SPI_CLK <= 1'b0;
                         clk_counter <= clk_counter + 1;
                     end    
                     3'b111 : begin
@@ -133,13 +136,8 @@ always @(posedge clk) begin
                         end else begin
                             bit_counter <= 3'b111;
                             clk_counter <= 3'b000;
-                            if(command_empty == 1'b1)cur_state   <= SPIED;
-                            else begin
-                                if (command_FIFO[command_addrr] == 2'b01) cur_state <= SPITX;
-                                else cur_state <= SPIRX;
-                                command_addrr <= command_addrr + 1;
-                                //add error detection if 2'b10 or 2'b01 is not the data read from the FIFO
-                            end
+                            tx_addrr <= tx_addrr + 1;
+                            cur_state   <= SPIACK;
                         end 
                     end
                     default : begin 
@@ -147,15 +145,37 @@ always @(posedge clk) begin
                     end
                 endcase                                  
             end
+            SPIACK: begin
+                case(clk_counter)
+                    3'b000 : begin
+                        SPI_CLK <= 1'bz;
+                        clk_counter <= clk_counter + 1;
+                    end
+                    3'b111 : begin
+                        clk_counter <= 3'b000;
+                        if (SPI_CLK_LINE == 1'b1) begin
+                            if(command_empty == 1'b1)cur_state   <= SPIED;
+                            else begin
+                                if (command_FIFO[command_addrr] == 2'b01) cur_state <= SPITX;
+                                else cur_state <= SPIRX;
+                                command_addrr <= command_addrr + 1;
+                            end
+                        end
+                    end
+                    default : begin 
+                        clk_counter <= clk_counter + 1;        
+                    end
+                endcase        
+            end
             SPIRX: begin
                 case(clk_counter)
                     3'b000 : begin
                         SPI_EN  <= 1'b1;
-                        SPI_CLK <= 1'b0;                
+                        SPI_CLK <= 1'b1;                
                         clk_counter <= clk_counter + 1;    
                     end
                     3'b100 : begin
-                        SPI_CLK  <= 1'b1;
+                        SPI_CLK  <= 1'b0;
                         rx_temp_reg[bit_counter] <= SPI_MISO;
                         clk_counter <= clk_counter +1;
                     end
@@ -185,12 +205,12 @@ always @(posedge clk) begin
                 case(clk_counter)
                     3'b000 : begin
                         SPI_EN  <=1'b1;
-                        SPI_CLK <=1'b0;
+                        SPI_CLK <=1'b1;
                         clk_counter <= clk_counter + 1;
                     end
                     3'b100 : begin
                         SPI_EN   <= 1'b0;
-                        SPI_CLK  <= 1'b0;
+                        SPI_CLK  <= 1'b1;
                         SPI_MOSI <= 1'b0;
                         clk_counter <= 3'b000;
                         cur_state <= IDLE;
