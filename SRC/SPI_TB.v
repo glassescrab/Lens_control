@@ -33,20 +33,20 @@ module SPI_TB();
     wire busy;
     wire [7:0] Spi_rx_reg;
     //SPI SERDES
-    wire CVM300_SPI_IN;
-    wire CVM300_SPI_OUT;
-    wire CVM300_SPI_CLK;
-    wire CVM300_SPI_EN;
+    wire LENS_SPI_MISO;
+    wire LENS_SPI_MOSI;
+    wire LENS_SPI_CLK;
+    wire SPI_EN;
     reg SPI_CLK;
        
     SPI_driver SPI_driver(
     .clk(clk),
     .cur_state(SPI_state),
     
-    .SPI_MISO(CVM300_SPI_IN),
-    .SPI_MOSI(CVM300_SPI_OUT),
-    .SPI_CLK_LINE(CVM300_SPI_CLK),
-    .SPI_EN(CVM300_SPI_EN),
+    .SPI_MISO(LENS_SPI_MISO),
+    .SPI_MOSI(LENS_SPI_MOSI),
+    .SPI_CLK_LINE(LENS_SPI_CLK),
+    .SPI_EN(SPI_EN),
     
     .busy(busy),
     .command_read(command_read),

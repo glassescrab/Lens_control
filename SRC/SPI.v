@@ -26,7 +26,7 @@ module SPI_driver(
     
     input wire  SPI_MISO,
     output reg  SPI_MOSI,
-    inout wire  SPI_CLK_LINE,
+    output reg  SPI_CLK,
     output reg  SPI_EN,
     
     output reg busy,
@@ -35,7 +35,8 @@ module SPI_driver(
     input wire tx_read,    
     input wire [1:0] Spi_rw,
     output reg [7:0] Spi_rx_reg,
-    input wire [7:0] Spi_tx_reg  
+    input wire [7:0] Spi_tx_reg,
+    input wire [15:0] Spi_wait_reg
     );
 
 localparam IDLE   = 4'b0000;
@@ -47,18 +48,19 @@ localparam SPIACK = 4'b1000;
 reg [1:0] command_FIFO[15:0];
 reg [7:0] tx_FIFO[15:0];
 reg [7:0] rx_FIFO[15:0];
+reg [15:0] wait_FIFO[15:0];
 reg [3:0] command_addrw;
 reg [3:0] command_addrr;
 reg [3:0] tx_addrw;
 reg [3:0] tx_addrr;
+reg [3:0] wait_addrw;
+reg [3:0] wait_addrr;
 reg [3:0] rx_addrw;
 reg [3:0] rx_addrr;
-reg SPI_CLK;
 wire command_empty;
 wire tx_empty;
 wire rx_empty;
-
-assign SPI_CLK_LINE = SPI_CLK;
+wire wait_empty;
 
 initial begin
     cur_state = 4'd0;
@@ -70,11 +72,14 @@ initial begin
     command_addrr = 4'd0;
     tx_addrw = 4'd0;
     tx_addrr = 4'd0;
+    wait_addrw = 4'b0;
+    wait_addrr = 4'b0;
     rx_addrw = 4'd0;
     rx_addrr = 4'd0;
 end
 
 assign tx_empty = &(~(tx_addrr^tx_addrw));
+assign wait_empty = &(~(wait_addrr^wait_addrw));
 assign rx_empty = &(~(rx_addrr^rx_addrw));
 assign command_empty = &(~(command_addrr^command_addrw));
 
@@ -82,6 +87,8 @@ always @(posedge clk) begin
     if (command_read == 1'b1) begin
         command_FIFO[command_addrw] <= Spi_rw;
         command_addrw <= command_addrw + 1;
+        wait_FIFO[wait_addrw] <= Spi_wait_reg;
+        wait_addrw <= wait_addrw + 1;
     end
     if (tx_read == 1'b1) begin
         tx_FIFO[tx_addrw] <= Spi_tx_reg;
@@ -99,6 +106,7 @@ end
 
 
 reg[2:0] bit_counter;
+reg[15:0] wait_counter;
 reg[2:0] clk_counter;
 reg[7:0] rx_temp_reg;
 
@@ -106,12 +114,14 @@ always @(posedge clk) begin
         case(cur_state)
             IDLE : begin
                 busy <= 1'b0;
+                SPI_CLK <= 1'b1;
                 if(command_empty == 1'b0)begin
                     if(command_FIFO[command_addrr] == 2'b01)begin
                         command_addrr  <= command_addrr + 1;
                         cur_state      <= SPITX;
                         clk_counter    <= 3'b000;
                         bit_counter    <= 3'b111;
+                        busy <= 1'b1;
                     end
                     //add error detection if the first command out of IDLE is rx, this is incorrectly set by the controller
                     // also add error detection if when entering TX, check for TX_FIFO empty, if not, controller is incorrectly set
@@ -120,13 +130,17 @@ always @(posedge clk) begin
             SPITX: begin    
                 case(clk_counter)
                     3'b000 : begin
+                        busy <= 1'b1;
                         SPI_EN   <= 1'b1;
-                        SPI_CLK  <= 1'b1;
+                        SPI_CLK  <= 1'b0;
+                        clk_counter <= clk_counter + 1;
+                    end
+                    3'b010: begin
                         SPI_MOSI <= tx_FIFO[tx_addrr][bit_counter];
                         clk_counter <= clk_counter + 1;
                     end
                     3'b100 : begin
-                        SPI_CLK <= 1'b0;
+                        SPI_CLK <= 1'b1;
                         clk_counter <= clk_counter + 1;
                     end    
                     3'b111 : begin
@@ -138,6 +152,8 @@ always @(posedge clk) begin
                             clk_counter <= 3'b000;
                             tx_addrr <= tx_addrr + 1;
                             cur_state   <= SPIACK;
+                            wait_addrr <= wait_addrr + 1;
+                            wait_counter   <= wait_FIFO[wait_addrr];
                         end 
                     end
                     default : begin 
@@ -148,19 +164,28 @@ always @(posedge clk) begin
             SPIACK: begin
                 case(clk_counter)
                     3'b000 : begin
-                        SPI_CLK <= 1'bz;
+                        SPI_CLK <= 1'b1;
+                        SPI_MOSI <= 1'b0;
                         clk_counter <= clk_counter + 1;
                     end
+//                    3'b100 : begin
+//                        SPI_CLK <= 1'b0;
+//                        clk_counter <= clk_counter + 1;
+//                    end    
                     3'b111 : begin
-                        clk_counter <= 3'b000;
-                        if (SPI_CLK_LINE == 1'b1) begin
+                        if(wait_counter != 3'b000) begin
+                            wait_counter <= wait_counter -1;
+                            clk_counter <= 3'b000;
+                        end else begin
+                            wait_counter <= 0;
+                            clk_counter <= 3'b000;
                             if(command_empty == 1'b1)cur_state   <= SPIED;
                             else begin
                                 if (command_FIFO[command_addrr] == 2'b01) cur_state <= SPITX;
                                 else cur_state <= SPIRX;
                                 command_addrr <= command_addrr + 1;
                             end
-                        end
+                        end 
                     end
                     default : begin 
                         clk_counter <= clk_counter + 1;        
