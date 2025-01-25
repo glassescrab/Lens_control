@@ -79,9 +79,9 @@ module SPI_controller(
                 if (PC_rx_reg2[0] == 1'b0 && PC_rx_reg1[0] == 1'b1) begin
                     cur_state <= tx_wr1;
                 end
-                if (PC_rx_reg2[1] == 1'b0 && PC_rx_reg1[1] == 1'b1) begin
-                    cur_state <= tx_rt;
-                end
+//                if (PC_rx_reg2[1] == 1'b0 && PC_rx_reg1[1] == 1'b1) begin
+//                    cur_state <= tx_rt;
+//                end
             end
             //Write single byte
             tx_wr1: begin
