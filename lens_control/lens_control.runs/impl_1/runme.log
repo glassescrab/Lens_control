@@ -1,0 +1,1091 @@
+
+*** Running vivado
+    with args -log Main.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Main.tcl -notrace
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Main.tcl -notrace
+Command: link_design -top Main -part xc7a75tfgg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a75tfgg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1423.523 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 162 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:72]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:73]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:97]
+INFO: [Timing 38-2] Deriving generated clocks [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:97]
+get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2128.570 ; gain = 568.145
+WARNING: [Vivado 12-584] No ports matched 'reset'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_LVDS_CLK_P'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300-LVDS_CLK_P'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_LVDS_CLK_N'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_LVDS_CLK_N'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_CLK_IN'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_CLK_IN'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_CLK_OUT'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_CLK_OUT'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_SYS_RES_N'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_SYS_RES_N'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_Enable_LVDS'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_Enable_LVDS'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_SPI_EN'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_SPI_EN'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_SPI_IN'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:134]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:134]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_SPI_IN'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_SPI_OUT'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_SPI_OUT'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_SPI_CLK'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_SPI_CLK'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_FRAME_REQ'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_FRAME_REQ'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[0]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:198]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:198]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[0]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:199]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:199]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[1]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:201]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:201]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[1]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:202]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:202]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[2]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:204]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:204]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[2]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:205]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:205]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[3]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:207]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:207]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[3]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:208]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:208]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[4]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:210]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:210]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[4]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:211]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:211]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[5]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:213]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:213]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[5]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:214]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:214]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[6]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:216]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:216]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[6]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:217]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:217]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[7]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:219]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:219]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[7]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:220]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:220]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[8]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:222]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:222]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[8]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:223]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:223]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[9]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:225]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:225]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_D[9]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:226]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:226]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_Line_valid'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:229]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:229]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_Line_valid'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:230]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:230]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_Data_valid'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:232]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:232]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CVM300_Data_valid'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:233]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:233]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[0]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:239]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:239]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[0]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:240]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:240]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[1]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:242]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:242]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[1]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:243]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:243]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[2]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:245]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:245]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[2]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:246]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:246]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[3]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:248]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:248]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[3]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:249]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:249]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[4]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:251]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:251]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[4]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:252]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:252]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[5]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:254]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:254]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[5]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:255]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:255]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[6]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:257]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:257]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[6]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:258]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:258]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[7]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:260]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:260]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_33[7]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:261]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:261]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_SRCC_P'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:264]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:264]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_SRCC_P'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:265]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:265]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_SRCC_N'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:267]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:267]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_SRCC_N'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:268]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:268]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[0]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:273]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:273]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[0]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:274]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:274]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[1]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:276]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:276]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[1]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:277]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:277]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[2]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:279]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:279]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[2]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:280]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:280]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[3]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:282]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:282]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[3]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:283]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:283]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[4]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:285]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:285]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[4]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:286]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:286]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[5]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:288]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:288]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[5]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:289]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:289]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[6]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:291]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:291]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[6]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:292]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:292]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[7]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:294]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:294]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USER_25[7]'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:295]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:295]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A2'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:303]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:303]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A2'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:304]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:304]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A3'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:306]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:306]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A3'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:307]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:307]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A4'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:309]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:309]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A4'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:310]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:310]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A7'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:312]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:312]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A7'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:313]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:313]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A8'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:315]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:315]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A8'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:316]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:316]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A9'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:318]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:318]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A9'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:319]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:319]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A10'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:321]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:321]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_A10'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:322]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:322]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PMOD_B1'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:327]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:327]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:327]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Common 17-14] Message 'Common 17-55' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:327]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:336]
+Finished Parsing XDC File [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2128.570 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 101 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 33 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 50 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 8 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+11 Infos, 102 Warnings, 101 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2128.570 ; gain = 1122.918
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a75t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a75t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.756 . Memory (MB): peak = 2128.570 ; gain = 0.000
+
+Starting Cache Timing Information Task
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:72]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:73]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 2a43c3232
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 2147.520 ; gain = 18.949
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter hostIF/core0/core0/leeb76b405f165a9b4ab0606f3ea0b3c4[7]_i_1 into driver instance hostIF/core0/core0/ld307737e57d50d07f937891de086bf8e_i_3, which resulted in an inversion of 7 pins
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 17 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 269531850
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 2460.828 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 9 cells and removed 12 cells
+INFO: [Opt 31-1021] In phase Retarget, 5 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1d9f75217
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 2460.828 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 38 cells and removed 63 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 6 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 298c93e21
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.133 . Memory (MB): peak = 2460.828 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 3 cells
+INFO: [Opt 31-1021] In phase Sweep, 12 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 298c93e21
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.170 . Memory (MB): peak = 2460.828 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 298c93e21
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.179 . Memory (MB): peak = 2460.828 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 298c93e21
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 2460.828 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 4 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               9  |              12  |                                              5  |
+|  Constant propagation         |              38  |              63  |                                              6  |
+|  Sweep                        |               1  |               3  |                                             12  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              4  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2460.828 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 24bb8f2f0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.227 . Memory (MB): peak = 2460.828 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Power 33-23] Power model is not available for a0/d0/dna0
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:72]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:73]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 1 BRAM(s) out of a total of 3 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 1 WE to EN ports
+Number of BRAM Ports augmented: 1 newly gated: 1 Total Ports: 6
+Number of Flops added for Enable Generation: 3
+
+Ending PowerOpt Patch Enables Task | Checksum: 1fc04a6db
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1fc04a6db
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.850 . Memory (MB): peak = 2583.211 ; gain = 122.383
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:72]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:73]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 21f84dab6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 21f84dab6
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 21f84dab6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+40 Infos, 108 Warnings, 101 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2583.211 ; gain = 454.641
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.257 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'U:/Lens_control/lens_control/lens_control.runs/impl_1/Main_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Main_drc_opted.rpt -pb Main_drc_opted.pb -rpx Main_drc_opted.rpx
+Command: report_drc -file Main_drc_opted.rpt -pb Main_drc_opted.pb -rpx Main_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file U:/Lens_control/lens_control/lens_control.runs/impl_1/Main_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a75t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a75t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 14bb55f93
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:72]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:73]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 19e9193be
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.421 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 28ffa29a0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.692 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 28ffa29a0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.699 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 28ffa29a0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.707 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 27deeb313
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.816 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 25c90ec8c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.902 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 25c90ec8c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.909 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 228edfaa9
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 39 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 18 nets or LUTs. Breaked 0 LUT, combined 18 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |             18  |                    18  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |             18  |                    18  |           0  |           9  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 22483a965
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 18fb2f27b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 18fb2f27b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1d7bc70c3
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c7ea8750
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 25661d3b2
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 28de45e46
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 27452f6c6
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 18125874d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1eaccaf2e
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1b35a5dc2
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 21c74197a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 21c74197a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:72]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:73]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1da927852
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.274 | TNS=-4.739 |
+Phase 1 Physical Synthesis Initialization | Checksum: 225bff670
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 21ead12fb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1da927852
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.274. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 16cc41c53
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 16cc41c53
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 16cc41c53
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 16cc41c53
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 16cc41c53
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 15399d46a
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Ending Placer Task | Checksum: 131b34fef
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+82 Infos, 112 Warnings, 101 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.708 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'U:/Lens_control/lens_control/lens_control.runs/impl_1/Main_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file Main_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file Main_utilization_placed.rpt -pb Main_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file Main_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a75t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a75t'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.185 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 0.00s |  WALL: 0.20s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.274 | TNS=-4.739 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1d16c6647
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.177 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.274 | TNS=-4.739 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 1d16c6647
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.197 . Memory (MB): peak = 2583.211 ; gain = 0.000
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.274 | TNS=-4.739 |
+INFO: [Physopt 32-702] Processed net hostIF/p_5_in. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hostIF/p_5_in. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.274 | TNS=-4.739 |
+Phase 3 Critical Path Optimization | Checksum: 1d16c6647
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.213 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-0.274 | TNS=-4.739 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2583.211 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 24253bc1d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.240 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+100 Infos, 112 Warnings, 101 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.740 . Memory (MB): peak = 2583.211 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'U:/Lens_control/lens_control/lens_control.runs/impl_1/Main_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a75t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a75t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 88a1fd05 ConstDB: 0 ShapeSum: e5e243f5 RouteDB: 0
+Post Restoration Checksum: NetGraph: 6c274a82 NumContArr: ea008dee Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 15627d870
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 2624.977 ; gain = 41.766
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 15627d870
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 2631.016 ; gain = 47.805
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 15627d870
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 2631.016 ; gain = 47.805
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 14e9745c9
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2644.867 ; gain = 61.656
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.209  | TNS=0.000  | WHS=-0.214 | THS=-30.753|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 8.70436e-05 %
+  Global Horizontal Routing Utilization  = 0.000426257 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 1569
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 1567
+  Number of Partially Routed Nets     = 2
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 129827224
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2648.316 ; gain = 65.105
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 129827224
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2648.316 ; gain = 65.105
+Phase 3 Initial Routing | Checksum: 914bcc05
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2648.316 ; gain = 65.105
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 106
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.209  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1035baad5
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+Phase 4 Rip-up And Reroute | Checksum: 1035baad5
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 16c6f50b7
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.209  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 16c6f50b7
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 16c6f50b7
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+Phase 5 Delay and Skew Optimization | Checksum: 16c6f50b7
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: d7d4ba42
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.209  | TNS=0.000  | WHS=0.094  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 138e8e3f6
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+Phase 6 Post Hold Fix | Checksum: 138e8e3f6
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.185882 %
+  Global Horizontal Routing Utilization  = 0.199986 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 14c37c83a
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 14c37c83a
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1595a4f05
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.209  | TNS=0.000  | WHS=0.094  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1595a4f05
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2648.316 ; gain = 65.105
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+115 Infos, 112 Warnings, 101 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 2648.316 ; gain = 65.105
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.764 . Memory (MB): peak = 2666.801 ; gain = 18.484
+INFO: [Common 17-1381] The checkpoint 'U:/Lens_control/lens_control/lens_control.runs/impl_1/Main_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Main_drc_routed.rpt -pb Main_drc_routed.pb -rpx Main_drc_routed.rpx
+Command: report_drc -file Main_drc_routed.rpt -pb Main_drc_routed.pb -rpx Main_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file U:/Lens_control/lens_control/lens_control.runs/impl_1/Main_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file Main_methodology_drc_routed.rpt -pb Main_methodology_drc_routed.pb -rpx Main_methodology_drc_routed.rpx
+Command: report_methodology -file Main_methodology_drc_routed.rpt -pb Main_methodology_drc_routed.pb -rpx Main_methodology_drc_routed.rpx
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:72]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:73]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file U:/Lens_control/lens_control/lens_control.runs/impl_1/Main_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file Main_power_routed.rpt -pb Main_power_summary_routed.pb -rpx Main_power_routed.rpx
+Command: report_power -file Main_power_routed.rpt -pb Main_power_summary_routed.pb -rpx Main_power_routed.rpx
+INFO: [Power 33-23] Power model is not available for a0/d0/dna0
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:72]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'okUH[0]' relative to clock 'okUH0' defined on the same pin is not supported, ignoring it [U:/Lens_control/lens_control/lens_control.srcs/constrs_1/imports/Downloads/xem7310_v1.xdc:73]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+128 Infos, 116 Warnings, 101 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file Main_route_status.rpt -pb Main_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file Main_timing_summary_routed.rpt -pb Main_timing_summary_routed.pb -rpx Main_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file Main_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file Main_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Main_bus_skew_routed.rpt -pb Main_bus_skew_routed.pb -rpx Main_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: write_bitstream -force Main.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a75t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a75t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[16].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[17].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[18].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[19].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[20].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[21].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[22].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[23].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[24].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[25].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[26].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[27].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[28].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[29].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[30].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer hostIF/iob_regs[31].iobf0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRARDADDR[10] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[5]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRARDADDR[11] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[6]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRARDADDR[12] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[7]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRARDADDR[13] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[8]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRARDADDR[5] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[0]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRARDADDR[6] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[1]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRARDADDR[7] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[2]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRARDADDR[8] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[3]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRARDADDR[9] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[4]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRBWRADDR[10] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[5]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRBWRADDR[11] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[6]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRBWRADDR[12] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[7]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRBWRADDR[13] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[8]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRBWRADDR[5] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[0]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRBWRADDR[6] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[1]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRBWRADDR[7] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[2]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRBWRADDR[8] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[3]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ADDRBWRADDR[9] (net: hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg_n_0_[4]) which is driven by a register (hostIF/core0/core0/l287f1d33aab074157010cd04cb03cd77_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/ENBWREN (net: hostIF/core0/core0/l2fd7e1a4c1a262bf4062db5f061b7878) which is driven by a register (hostIF/core0/core0/l2fd7e1a4c1a262bf4062db5f061b7878_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 hostIF/core0/core0/r0 has an input control pin hostIF/core0/core0/r0/WEBWE[2] (net: hostIF/core0/core0/l2fd7e1a4c1a262bf4062db5f061b7878) which is driven by a register (hostIF/core0/core0/l2fd7e1a4c1a262bf4062db5f061b7878_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC RTSTAT-10] No routable loads: 2 net(s) have no routable loads. The problem bus(es) and/or net(s) are hostIF/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, and hostIF/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 38 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 26303968 bits.
+Writing bitstream ./Main.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 3138.480 ; gain = 462.398
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 30 19:54:27 2025...
