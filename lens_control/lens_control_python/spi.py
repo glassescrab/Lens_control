@@ -1,7 +1,6 @@
 import numpy as np
 import struct
-import tkinter as tk
-from tkinter import messagebox
+from tkinter import *
 def reduction(val1, delay1, delay2, val2=0):
     SPI_control = (val1 << 24) | (delay1 << 17) | (0x00<<16) | (val2 << 8) | (delay2 << 1) | 0x01
     return SPI_control
@@ -68,6 +67,92 @@ def change_focus(dev, increment):
     send_single_command(dev, 0x44)
     send_single_command(dev, HH)
     send_single_command(dev, LL)
+    
+def printval(val):
+    print(val)
+
+class LensController:
+    def __init__(self,dev):
+        self.focus_level = 1
+        self.aperature_level = 1
+        self.dev = dev
+        self.name = ""
+       
+        
+    def initializeLens(self):
+        for i in range(50):
+            send_single_command(self.dev,0x0A)
+        time.sleep(0.1)
+        self.resetLens()
+        time.sleep(0.1)
+        self.getName()
+        
+            
+    def resetLens(self):
+        self.aperature_level = 1
+        self.focus_level = 1
+        change_aperature(self.dev, -127)
+        time.sleep(0.5)
+        change_focus(self.dev, 32767)
+        # self.changeAperature(1)
+        # self.changeFocus(1)
+        
+    def changeFocus(self, new_level=0):
+        if(new_level < 1 or new_level > 10):
+            return
+        difference_level = -1*(new_level - self.focus_level)
+        change_focus(self.dev, int(difference_level / 10 * 2100))
+        self.focus_level = new_level
+        return
+    
+    def changeAperature(self, new_level = 0):
+        if(new_level < 1 or new_level > 10):
+            return
+        difference_level = new_level - self.aperature_level
+        change_aperature(self.dev, int(difference_level / 10 * 64))
+        self.aperature_level = new_level
+        return
+       
+    def sync(self, new_focus_level=0, new_aperature_level=0):
+        self.changeFocus(new_focus_level)
+        time.sleep(0.2)
+        self.changeAperature(new_aperature_level)
+        return
+    
+    def getName(self):
+        self.name = get_lens_name(self.dev)
+        return 
+        
+    def printName(self):
+        print(self.name)
+        return
+
+
+class App:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Persistent Object GUI")
+        
+        # Instantiate the object and keep it throughout the session
+        self.my_object = MyObject("SessionObject")
+        
+        self.label = tk.Label(root, text=self.my_object.get_info(), font=("Arial", 14))
+        self.label.pack(pady=10)
+        
+        self.increment_button = tk.Button(root, text="Increment", command=self.increment_counter)
+        self.increment_button.pack(pady=5)
+        
+        self.show_button = tk.Button(root, text="Show Info", command=self.show_info)
+        self.show_button.pack(pady=5)
+    
+    def increment_counter(self):
+        self.my_object.increment()
+        self.label.config(text=self.my_object.get_info())
+    
+    def show_info(self):
+        messagebox.showinfo("Object Info", self.my_object.get_info())
+
+
 #%%
 import sys,os # system related library
 ok_sdk_loc = "C:\\Program Files\\Opal Kelly\\FrontPanelUSB\\API\\Python\\x64"
@@ -89,6 +174,36 @@ if dev.IsFrontPanelEnabled():
 else:
      sys.stderr.write("FrontPanel host interface not detected.")
 
+
+
+#%%
+
+    
+
+lens = LensController(dev)
+lens.initializeLens()
+
+
+master = Tk()
+master.geometry("640x480")
+focus_level = IntVar()
+aperature_level = IntVar()
+f = Scale(master,variable=focus_level, label="Focus", from_=1, to=10, orient=HORIZONTAL)
+f.pack()
+
+a = Scale(master,variable=aperature_level, label="Aperature", from_=1, to=10,orient=HORIZONTAL)
+a.pack()
+
+button1 = Button(master, text="Reset", width=25,command=lens.resetLens)
+button2 = Button(master, text="Apply", width=25, command=lambda: lens.sync(focus_level.get(), aperature_level.get()))
+button1.pack()
+button2.pack()
+
+
+l1 = Label(master,text=lens.name)
+l1.pack()
+print(lens.name)
+mainloop()
 #%%
 print ("init lens")
 for i in range(50):
@@ -97,7 +212,17 @@ for i in range(50):
 
 #%%
 
-
+lens = LensController(dev)
+lens.initializeLens()
+#%%
+lens.resetLens()
+lens.getName()
+lens.printName()
+#%%
+for i in range(1,11):
+    level = i 
+    lens.sync(level, level)
+    time.sleep(1)
 # change_aperature(dev, -10)
 # change_focus(dev, 1000)
 
@@ -144,4 +269,4 @@ print(int(0xFF))
 
 
 #%%
-dev.Close
+dev.Close()
